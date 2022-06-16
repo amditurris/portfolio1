@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+}
+
+/* --- Grid --- */
+
+.grid-container > * {
+    text-align: center;
+    background-color: orange;
+}
+
+.grid-container {
+    display:grid;
+    grid-template-columns: 12% auto;
+    grid-template-rows: 57em;
+}
+
+.header {
+    grid-area: header;
+    grid-column: 1;
+    grid-row: 1;
+    padding: 1.875em 0em;
+}
+
+
+.main {
+    grid-area: main;
+    background-color: rgb(29, 29, 29);
+    grid-column: 2;
+    grid-row: 1 / span 3;
+}
+
+
+.footer {
+    grid-area: footer;
+    background-color: red;
+}
+
+
+
+/* MAIN */
+
+#particles-js {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.main {
+    position: relative;
+    z-index: 99;
+}
+
+.main h1 {
+    text-align: left;
+    font-size: 2.2em;
+    color: white;
+    font-family: 'Press Start 2P', Tahoma, sans-serif;
+    padding: 16.5rem 0rem 0rem 9.25rem;
+    line-height: 1.5;
+    animation: backInLeft;
+    animation-duration: 0.8s;
+}
+
+string {
+    font-size: 2.2rem;
+    color: #35F2DF;
+    font-family: 'Press Start 2P', Tahoma, sans-serif;
+    text-shadow: 0.25rem 0.25rem #BF2195;
+}
+
+.button {
+    border:solid;
+    border-color:#BF2195;
+    border-width: 0.5mm;
+    color: #BF2195;
+    padding: 0.94em 2em;
+    margin: 9.25em;
+    text-align: left;
+    text-decoration: none;
+    font-size: 1em;
+    font-family: none;
+    font-weight: bolder;
+}
+
+.button:hover {
+    background-color: #BF2195;
+    color: rgb(168, 168, 168);
+  }
+
+.main p {
+    text-align: left;
+    padding-top:3.125em;
+    animation: backInLeft;
+    animation-duration: 0.8s;
+}
+
+h6 {
+    text-align: left;
+    color: #D8D9D7;
+    font-size: 1.02em;
+    font-family: Tahoma, sans-serif;
+    padding: 3.125rem 0rem 0rem 9.25rem;
+    animation: backInLeft;
+    animation-duration: 0.8s;
+}
+
+/* Computadoras grandes, 1200px o más*/
+@media (max-width: 1200px) {
+    body { 
+        font-size: 14px;
+    }
+
+    .grid-container {
+        display:grid;
+        grid-template-columns: 12% auto;
+        grid-template-rows: 59em;
+    }
+
+    img {
+        width: 2rem !important;
+        height: 2rem !important;
+    }
+
+    .main h1 {
+        padding: 13rem 2rem 0rem 5rem;
+        font-size: 1.8em;
+        line-height: 2.5em;
+    }
+
+    h6 {
+        padding: 1.125rem 2rem 0rem 5rem;
+        font-size: 1.3em;
+    }
+
+    .button {
+        margin-left: 5rem;
+        font-size: 1.2em;
+    }
+}
+
+/* Computadoras, 992px o más*/
+@media (max-width: 992px) {
+    body { 
+        font-size: 11px;
+    }
+
+    .grid-container {
+        display:grid;
+        grid-template-columns: 15% auto;
+        grid-template-rows: 63em;
+    }
+
+    .main {
+        position: relative;
+        z-index: 99;
+    }
+    
+    .main h1 {
+        padding: 12rem 2rem 0rem 3rem;
+        font-size: 1.8em;
+        line-height: 2.5em;
+    }
+
+    h6 {
+        padding: 1.125rem 2rem 0rem 3rem;
+        font-size: 1.5em;
+    }
+
+    .button {
+        margin-left: 3rem;
+        font-size: 1.2em;
+    }
+
+    img {
+        width: 2rem !important;
+        height: 2rem !important;
+    }
+}
+
+/* Tablets, 795px o más */
+@media (max-width: 795px) {
+    body { 
+        font-size: 14px;
+    }
+    
+    .grid-container {
+        display:grid;
+        grid-template-columns:auto;
+        grid-template-rows: 10em 50em;
+    }
+    
+    .header {
+        grid-area: header;
+        grid-row: 1;
+        padding: 0em;
+    }
+    
+    .main {
+        grid-area: main;
+        background-color: #1d1d1d;
+        grid-row: 2;
+    }
+
+    /* MAIN */
+
+    .main h1 {
+        text-align: left;
+        font-size: 1.4em;
+        color: white;
+        font-family: 'Press Start 2P', Tahoma, sans-serif;
+        padding: 10.5rem 4rem 1rem 4rem;
+        line-height: 2;
+    }
+
+    string {
+        font-size: 1.5rem;
+        color: #35F2DF;
+        font-family: 'Press Start 2P', Tahoma, sans-serif;
+        text-shadow: 0.25rem 0.25rem #BF2195;
+    }
+    
+    .button {
+        border:solid;
+        border-color:#BF2195;
+        border-width: 0.5mm;
+        color: #BF2195;
+        padding: 0.5rem 1rem;
+        margin: 4rem;
+        text-align: left;
+        text-decoration: none;
+        font-size: 1.2em;
+        font-family: none;
+        font-weight: bolder;
+    }
+    
+    .main p {
+        text-align: left;
+        padding-top: 2em;
+    }
+    
+    h6 {
+        text-align: left;
+        color: #D8D9D7;
+        font-size: 1.2em;
+        font-family: Tahoma, sans-serif;
+        padding: 0rem 0rem 0rem 4rem;
+    }
+
+}
+
+/* Teléfonos, 576px o más*/
+@media (max-width: 576px) {
+    body { 
+        font-size: 12px;
+    }
+    
+    .grid-container {
+        display:grid;
+        grid-template-columns: auto;
+        grid-template-rows: 11em 55em;
+    }
+    
+    .header {
+        grid-area: header;
+        grid-row: 1;
+        padding: 0em;
+    }
+    
+    .main {
+        grid-area: main;
+        background-color: #1d1d1d;
+        grid-row: 2;
+        height: 100hv;
+    }
+
+    /* MAIN */
+
+    .main h1 {
+        font-size: 1.5em;
+        padding: 7rem 0rem 1rem 2rem;
+        line-height: 2.1;
+    }
+
+    string {
+        font-size: 1.5rem;
+        color: #35F2DF;
+        font-family: 'Press Start 2P', Tahoma, sans-serif;
+        text-shadow: 0.25rem 0.25rem #BF2195;
+    }
+    
+    .button {
+        border:solid;
+        border-color:#BF2195;
+        border-width: 0.5mm;
+        color: #BF2195;
+        padding: 0.5em 1em;
+        margin: 2rem;
+        text-align: left;
+        text-decoration: none;
+        font-size:1.5em;
+        font-family: none;
+        font-weight: bolder;
+    }
+    
+    .main p {
+        text-align: left;
+        padding-top: 2em;
+    }
+    
+    h6 {
+        text-align: left;
+        color: #D8D9D7;
+        font-size: 1.2em;
+        font-family: Tahoma, sans-serif;
+        padding: 0rem 0rem 1rem 2rem;
+    }
+}

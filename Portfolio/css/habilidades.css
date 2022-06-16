@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    font-size: 16px;
+}
+
+/* --- Grid --- */
+
+.grid-container > * {
+    text-align: center;
+    background-color: orange;
+}
+
+.grid-container {
+    display:grid;
+    grid-template-columns: 12% auto;
+    grid-template-rows: 57em;
+}
+
+.header {
+    grid-area: header;
+    grid-column: 1;
+    grid-row: 1;
+    padding: 1.875em 0em;
+}
+
+
+.main {
+    grid-area: main;
+    background-color: rgb(29, 29, 29);
+    grid-column: 2;
+    grid-row: 1 / span 3;
+}
+
+
+.footer {
+    grid-area: footer;
+    background-color: red;
+}
+
+/* MAIN */
+
+.main {
+	position: relative;
+	z-index: 99;
+}
+
+#particles-js {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: column;
+	padding: 17rem 0rem;
+}
+
+.primera ,.segunda {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.segunda {
+	padding-top: 5rem;
+}
+
+
+/* Circle */
+.flex-container figure {
+	position: relative;
+    margin: 0rem 2rem;
+    z-index: 99;
+}
+.flex-container figure::before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 0;
+	height: 0;
+	background: rgba(255,255,255,.2);
+	border-radius: 100%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	opacity: 0;
+}
+.flex-container figure:hover::before {
+	-webkit-animation: circle .75s;
+	animation: circle .75s;
+}
+@-webkit-keyframes circle {
+	0% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 1;
+	}
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}
+@keyframes circle {
+	0% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 1;
+	}
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}
+
+
+/* Computadoras grandes, 1200px o más*/
+@media (max-width: 1200px) {
+    .flex-container3 {
+        padding: 8rem 0rem;
+    }
+}
+
+/* Computadoras, 992px o más*/
+@media (max-width: 992px) {
+
+}
+
+/* Tablets, 795px o más */
+@media (max-width: 795px) {
+
+}
+
+/* Teléfonos, 576px o más*/
+@media (max-width: 576px) {
+    .flex-container3 {
+		align-content: space-evenly;
+        padding: 6rem 0rem;
+    }
+}

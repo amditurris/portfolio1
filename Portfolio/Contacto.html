@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Contacto.css">
+    <link rel="stylesheet" href="css/lateral2.css">
+    <!-- Fuente Iconos-->
+    <script src="https://kit.fontawesome.com/25ef1c25ed.js" crossorigin="anonymous"></script>
+    <!--FUENTE-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <title>A.M.D.T. - CONTACTO</title>
+</head>
+<body class="grid-container">
+    <header class="header" id="idheader"></header>
+    <article class="main">
+        <div id="particles-js"></div>
+        <div class="flex-container">
+            <h1>Contactame.</h1>
+            <div class="flex-container1">
+                <div class="contenedor-form">
+                <form action="" method="post" id="formulario" onsubmit="return validar();">
+                    <input  type="text" name="nombre" id="nombre" placeholder="*Nombre:" size="10" maxlength="30" class="medios" required>
+         
+                    <input  type="text" name="apellido" id="apellido" placeholder="*Apellido:" size="10" maxlength="20" class="medios" required>
+
+                    <input  type="email" name="correo" id="correo" placeholder="*Email:" size="10" maxlength="50" class="medios" required>
+      
+                    <input type="text" name="empresa" id="empresa" placeholder="Empresa:" size="39" maxlength="20" class="medios">
+
+                    <input  type="text" name="asunto" id="asunto" placeholder="*Asunto:" size="39" maxlength="50" class="total"  required>
+
+                    <!--<label for="lconsulta">Consulta: </label> -->
+                    <textarea  name="consulta" id="consulta" rows="6" cols="40" placeholder="*Escribe tu consulta.." class="total" required></textarea>
+
+                    <input class="submit" id="btn" type="submit" value="Contactame!">
+                </form>
+
+                <div id="error"></div>
+                </div>
+                
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105073.44366970648!2d-58.503338076788324!3d-34.615662458658974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses!2sar!4v1652480959210!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </article>
+    <!-- <footer class="footer"></footer> -->
+    <!--Lateral-->
+    <script src="js/scripts.js"></script>
+    
+    <!--Particulas fondo-->
+    <script src="js/particles.min.js"></script>
+    <script src="otros/particlesjs-config.json"></script> 
+    <script src="otros/particlesjs-config.json"></script> 
+    
+
+    <!--Validación de Formulario-->
+    <script src="js/Formulario.js"></script>
+</body>
+</html>

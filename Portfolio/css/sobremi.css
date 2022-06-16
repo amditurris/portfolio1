@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* --- Grid --- */
+
+.grid-container > * {
+    text-align: center;
+    background-color: orange;
+}
+
+.grid-container {
+    display:grid;
+    grid-template-columns: 12% auto;
+    grid-template-rows: 57em;
+}
+
+.header {
+    grid-area: header;
+    grid-column: 1;
+    grid-row: 1;
+    padding: 1.875em 0em;
+}
+
+
+.main {
+    grid-area: main;
+    background-color: rgb(29, 29, 29);
+    grid-column: 2;
+    grid-row: 1 / span 3;
+}
+
+
+.footer {
+    grid-area: footer;
+    background-color: red;
+}
+
+/* --- MAIN --- */
+
+/* MAIN */
+
+#particles-js {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.main {
+    position: relative;
+    z-index: 99;
+}
+
+.main h1 {
+    text-align: left;
+    font-size: 1.2cm;
+    color: #35F2DF;
+    padding: 240px 0px 20px 110px;
+    line-height: 1.5;
+}
+
+.main p {
+    font-size: 0.4cm;
+    line-height: 1.6;
+    color: white;
+    text-align: left;
+    padding-left: 110px;
+    width: 50%;
+}
